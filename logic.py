@@ -54,7 +54,7 @@ def key_handler(event, img, roi):
 def main():
 
 
-    img = cv2.imread("image1.jpg")
+    img = cv2.imread("image.jpg")
 
     if img is None:
         print("Image not found")
