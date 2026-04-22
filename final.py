@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib.widgets import RectangleSelector, CheckButtons, Button
 
 # Load
-img = cv2.imread("i.jpg")
+img = cv2.imread("o.jpg")
 detector = dlib.get_frontal_face_detector()
 
 try:
@@ -64,11 +64,11 @@ def apply(event=None):
                               face.left(), face.top(),
                               face.right(), face.bottom())
 
-        # OTHER PARTS → only if selected + predictor exists
+        #other features
         if predictor:
             shape = predictor(gray, face)
 
-            for i in range(1, len(labels)):  # skip Face (index 0)
+            for i in range(1, len(labels)):  # skip face
                 if selected[i]:
                     part = labels[i]
 
